@@ -15,7 +15,6 @@ public class follow : MonoBehaviour
         if (target.position.x < 8 && target.position.x > -8)
         {
             Vector3 targetPosition = target.position + offset;
-
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref vel, damping);
         }
     }
