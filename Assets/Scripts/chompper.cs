@@ -6,6 +6,7 @@ public class chompper : MonoBehaviour
     public Animator animator;
 
     public GameObject player;
+    public GameObject parts;
 
     int timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +27,7 @@ public class chompper : MonoBehaviour
         {
             player.transform.position = new Vector2(0, 0);
             player.SetActive(true);
+            parts.SetActive(false);
             timer = 0;
         }
     }
@@ -34,6 +36,7 @@ public class chompper : MonoBehaviour
     {
         animator.SetBool("omnom", true);
         player.SetActive(false);
+        parts.SetActive(true);
         timer = 0;
     }
 }
